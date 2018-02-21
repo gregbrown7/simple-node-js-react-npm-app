@@ -12,3 +12,31 @@ The `jenkins` directory contains an example of the `Jenkinsfile` (i.e. Pipeline)
 you'll be creating yourself during the tutorial and the `scripts` subdirectory
 contains shell scripts with commands that are executed when Jenkins processes
 the "Test" and "Deliver" stages of your Pipeline.
+
+## Using the Registry
+
+Manually:
+
+```bash
+docker image build -t localhost:5000/simple-react-app .
+```
+
+Push:
+
+```bash
+docker push localhost:5000/simple-react-app
+```
+
+Remove local image:
+
+```bash
+docker image rm localhost:5000/simple-react-app
+```
+
+Pull:
+
+```bash
+docker pull localhost:5000/simple-react-app
+```
+
+## TODO - Set up Jenkins to build and push images into registry
